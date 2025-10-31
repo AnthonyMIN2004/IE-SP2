@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/9th.css" />
+    <style>
+      /* Image + Text card (new section) */
+      .img-text-card {
+        display: flex;
+        background-color: #3b82f6; /* blue */
+        padding: 20px;
+        border-radius: 8px;
+        width: 80%;
+        margin: 50px auto;
+        color: white;
+      }
+
+      .img-text-card .card-img {
+        width: 200px;
+        height: 200px;
+        background-color: #f97316; /* orange */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-family: sans-serif;
+        margin-right: 20px;
+        border-radius: 8px;
+      }
+
+      .img-text-card .card-text {
+        flex: 1;
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#" class="logo">Logo</a>
+      <a class="menu-toggle" aria-label="メニュー">☰</a>
+      <ul class="nav-list">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">サービス</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+    </nav>
+
+    <section class="hero">
+      <h1>メインキャッチコピー</h1>
+      <p>セブテキスト</p>
+      <a href="#cta" class="btn">今すぐ始める</a>
+    </section>
+
+    <section class="flex-container">
+      <div class="flex-item">アイテム1</div>
+      <div class="flex-item">アイテム2</div>
+      <div class="flex-item">アイテム3</div>
+    </section>
+
+    <section class="card-grid">
+      <article class="card">
+        <img src="https://picsum.photos/800/600" alt="説明" />
+        <h3>タイトル</h3>
+        <p>本文テキスト</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/800/600" alt="説明" />
+        <h3>タイトル</h3>
+        <p>本文テキスト</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/800/600" alt="説明" />
+        <h3>タイトル</h3>
+        <p>本文テキスト</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/800/600" alt="説明" />
+        <h3>タイトル</h3>
+        <p>本文テキスト</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/800/600" alt="説明" />
+        <h3>タイトル</h3>
+        <p>本文テキスト</p>
+      </article>
+      <article class="card">
+        <img src="https://picsum.photos/800/600" alt="説明" />
+        <h3>タイトル</h3>
+        <p>本文テキスト</p>
+      </article>
+    </section>
+
+    <!-- ✅ Image + Text Section -->
+    <section class="img-text-card">
+    <img src="https://picsum.photos/800/600" alt="説明" />
+    <div class="card-content">
+      <h3>タイトル</h3>
+      <p>
+        本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト。
+      </p>
+    </div>
+  </section>
+  </body>
+</html>
