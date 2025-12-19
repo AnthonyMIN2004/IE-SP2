@@ -1,0 +1,860 @@
+/* ============================================
+   RESET & BASE STYLES
+   Basic setup for all elements
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    font-weight: 400; 
+}
+
+/* Smooth scrolling for the whole page */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================
+   LAYOUT UTILITIES
+   Reusable layout components
+   ============================================ */
+
+/* Container for centering content with max width */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2-column grid layout */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* 3-column grid layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ============================================
+   TYPOGRAPHY
+   Heading and text styles
+   ============================================ */
+
+h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+h2 {
+    font-size: 40px;
+    color: #000000;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: #1e293b;
+}
+
+p {
+    font-size: 18.5px;
+    font-weight: 500;
+    color: black;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* ============================================
+   SPACING UTILITIES
+   Helper classes for margins
+   ============================================ */
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-80 {
+    margin-top: 80px;
+}
+
+/* ============================================
+   BUTTONS
+   Button styles used throughout the site
+   ============================================ */
+
+/* Base button style */
+.btn {
+    padding: 15px 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+/* Primary button */
+.btn-primary {
+    background: #2563eb;
+    color: white;
+}
+
+/* Hover effect */
+.btn-primary:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* HERO BUTTON — small  size */
+.hero-content .btn-primary {
+    display: inline-block !important;
+    width: auto !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* CONTACT FORM BUTTON — full width */
+.contact-form .btn-primary {
+    display: flex !important;
+    width: 100% !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* Send icon (contact button) */
+.send-icon {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* ============================================
+   CARD COMPONENTS
+   Reusable card design
+   ============================================ */
+
+.card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Card hover effect - lift up with deeper shadow */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+/* ============================================
+   HEADER & NAVIGATION
+   Sticky navigation bar at the top
+   ============================================ */
+
+header {
+    background: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo text */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2563eb;
+}
+
+/* Navigation menu list */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+/* Navigation links */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+/* Change color on hover */
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* ============================================
+   HERO SECTION
+   Top section with main headline and phone mockup
+   ============================================ */
+
+.hero {
+    background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+    padding: 80px 20px;
+}
+
+/* Left side text content */
+.hero-content p {
+    margin-bottom: 30px;
+}
+
+/* Phone mockup - Right side
+   Tilted by default, straightens on hover */
+.phone-mockup {
+    background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
+    border-radius: 35px;
+    padding: 40px;
+    box-shadow: 0 30px 80px rgba(37, 99, 235, 0.4);
+    transform: rotate(8deg);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    max-width: 400px;
+}
+
+/* Straighten phone and lift up on hover */
+.phone-mockup:hover {
+    transform: rotate(0deg) translateY(-10px);
+    box-shadow: 0 40px 100px rgba(37, 99, 235, 0.5);
+}
+
+/* White screen inside phone mockup */
+.phone-screen {
+    background: white;
+    border-radius: 25px;
+    padding: 30px;
+}
+
+/* Header inside phone - "今日の予定" with calendar icon */
+.phone-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #2563eb;
+    font-size: 18px;
+}
+
+/* Calendar icon in phone header */
+.header-icon {
+    width: 24px;
+    height: 24px;
+    stroke: #2563eb;
+}
+
+/* ============================================
+   SCHEDULE ITEMS
+   Items displayed inside phone mockup
+   ============================================ */
+
+/* Schedule item container */
+.schedule-item {
+    padding: 18px 20px;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s;
+}
+
+/* Slide right on hover */
+.schedule-item:hover {
+    transform: translateX(5px);
+}
+
+/* Different background colors for each item type */
+.schedule-item.clock {
+    background: #eff6ff; /* Light blue for class */
+}
+
+.schedule-item.check {
+    background: #f0fdf4; /* Light green for deadline */
+}
+
+.schedule-item.event {
+    background: #fff7ed; /* Light orange for event */
+}
+
+/* Icon container with colored icon */
+.schedule-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* SVG icon sizing */
+.schedule-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Clock icon color - blue for class */
+.schedule-item.clock .schedule-icon {
+    color: #3b82f6;
+}
+
+/* Check icon color - green for deadline */
+.schedule-item.check .schedule-icon {
+    color: #10b981;
+}
+
+/* Calendar icon color - orange for event */
+.schedule-item.event .schedule-icon {
+    color: #f97316;
+}
+
+/* Text content area */
+.schedule-content {
+    flex: 1;
+}
+
+/* Schedule title text */
+.schedule-title {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 4px;
+    font-size: 15px;
+}
+
+/* Time display text */
+.schedule-time {
+    font-size: 13px;
+    color: #64748b;
+}
+
+/* ============================================
+   PROBLEMS SECTION
+   Section showing user pain points
+   ============================================ */
+
+.problems {
+    padding: 60px 20px;
+    background: white;
+}
+
+/* Container for problem cards */
+.problems-list {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Red-tinted cards for problem statements */
+.problem-card {
+    background: #fef2f2;
+    padding: 20px 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s;
+}
+
+/* Slide right on hover */
+.problem-card:hover {
+    transform: translateX(10px);
+}
+
+/* Alert/warning icon */
+.problem-icon {
+    color: #ef4444;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.problem-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: #ef4444;
+}
+
+/* ============================================
+   FEATURES SECTION
+   Section showing 3 main features
+   ============================================ */
+
+.features {
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+/* Colored icon boxes for feature cards */
+.icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.icon svg {
+    width: 28px;
+    height: 28px;
+}
+
+/* Blue icon box */
+.icon.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+/* Green icon box */
+.icon.green {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+/* Orange icon box */
+.icon.orange {
+    background: #fed7aa;
+    color: #f97316;
+}
+
+/* Text inside feature cards */
+.card p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* ============================================
+   STEPS SECTION 
+   3-step guide: "3ステップでかんたんスタート"
+   ============================================ */
+
+.steps {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/* Individual step container */
+.step {
+    text-align: center;
+    flex: 1;
+    position: relative;
+}
+
+/* Big numbered circles with gradient background and icon */
+.step-num {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* SVG icon inside the circle */
+.step-num svg {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    stroke: white;
+}
+
+/* Small numbered badge (1, 2, 3) on top-right of circle */
+.step-number {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: #2563eb;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    border: 3px solid white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Connecting line between steps */
+.step::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: #93c5fd; 
+    z-index: 1;
+}
+
+/* Remove line after last step */
+.step:last-child::before {
+    display: none;
+}
+
+/* Step description text */
+.step p {
+    font-size: 14px;
+}
+
+/* ============================================
+   PRICING SECTION
+   Subscription plans and pricing table
+   ============================================ */
+
+.pricing {
+    padding: 80px 20px;
+    background: white;
+}
+
+/* Comparison table - "シンプルな料金プラン" */
+.pricing-table {
+    width: 100%;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 50px;
+    border-collapse: collapse;
+}
+
+/* One-piece gradient header */
+.pricing-table thead tr {
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    color: white;
+}
+
+/* Prevent table headers from drawing their own backgrounds */
+.pricing-table th {
+    background: transparent !important;
+    border-right: none;
+}
+
+/* Table cell padding */
+.pricing-table th,
+.pricing-table td {
+    padding: 20px;
+    text-align: left;
+}
+
+/* Table body rows */
+.pricing-table tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background 0.3s;
+}
+
+/* Highlight row on hover */
+.pricing-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Remove border from last row */
+.pricing-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Pricing cards below the table */
+.pricing-card {
+    position: relative;
+}
+
+/* Featured plan (Student) - highlighted with gradient */
+.pricing-card.featured {
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+    color: white;
+    transform: scale(1.05);
+}
+
+/* "人気" badge on featured card */
+.badge {
+    background: #fbbf24;
+    color: #1e293b;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Plan name heading */
+.pricing-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+/* Price display */
+.price {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* White text for featured card */
+.pricing-card.featured h3,
+.pricing-card.featured .price,
+.pricing-card.featured ul {
+    color: white;
+}
+
+/* Feature list */
+.pricing-card ul {
+    list-style: none;
+    color: #64748b;
+}
+
+/* Individual feature items */
+.pricing-card ul li {
+    padding: 8px 0;
+    font-size: 14px;
+    
+}
+
+/* ============================================
+   FAQ SECTION
+   
+   ============================================ */
+
+.faq {
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+/* Container for FAQ items */
+.faq-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Individual FAQ item */
+.faq-item {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+/* Question text - clickable area */
+.faq-q {
+    padding: 20px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+}
+
+/* Highlight on hover */
+.faq-q:hover {
+    background: #f8fafc;
+}
+
+/* Arrow indicator */
+.arrow {
+    color: #2563eb;
+    transition: transform 0.3s;
+}
+
+/* Answer section styling for <details> element */
+.faq-item summary {
+    list-style: none;
+}
+
+/* Hide default disclosure triangle */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Answer text */
+.faq-a {
+    padding: 0 25px 20px 25px;
+    color: #64748b;
+}
+
+/* ============================================
+   CONTACT SECTION
+   Contact form
+   ============================================ */
+
+.contact {
+    padding: 80px 20px;
+    background: white;
+}
+/* heading spacing (お問い合わせ) */
+.contact h2.section-title {
+    margin-bottom: 10px;  
+}
+
+/* Description under the heading */
+.contact p.text-center {
+    margin-top: 5px !important;   
+    margin-bottom: 30px;         
+    font-size: 15px;
+    color: #050607;
+}
+
+/* Form container */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* Form field wrapper */
+.form-group {
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+/* Form labels */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* Wrapper for input with icon */
+.input-with-icon {
+    position: relative;
+}
+
+/* Icon positioned inside input on the RIGHT side */
+.input-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    pointer-events: none;
+}
+
+/* Input styling for all form fields */
+.form-group select,
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    transition: border 0.3s;
+}
+
+/* Add right padding to input with icon so text doesn't overlap icon */
+.input-with-icon input {
+    padding-right: 45px;
+}
+
+/* Blue border on focus */
+.form-group select:focus,
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border: 1px solid #2563eb;
+}
+
+/* Textarea specific styling - fixed height, no resize */
+.form-group textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* Small note below submit button */
+.form-note {
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* ============================================
+   FOOTER
+   Bottom copyright section
+   ============================================ */
+
+footer {
+    background: #05080b;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Footer text */
+footer p {
+    margin-bottom: 10px;
+    color: #94a3b8;
+}
+
+/* Make first line bold and white */
+footer p:first-child {
+    color: white;
+    font-weight: 700;
+    font-size: 18px;
+
+    
+}
+footer p:last-child {
+    color: #94a3b8;
+    font-weight: 400;
+    font-size: 13px;
+
+    
+}
+
+

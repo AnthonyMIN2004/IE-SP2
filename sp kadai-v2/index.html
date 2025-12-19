@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Planner - 大学生活の予定管理をもっとシンプルに</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation bar - sticky at top -->
+    <header>
+        <nav class="container">
+            <div class="logo">Campus Planner</div>
+            <ul class="nav-links">
+                <li><a href="#features">特徴</a></li>
+                <li><a href="#how">使い方</a></li>
+                <li><a href="#pricing">プラン</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero section with main message and phone mockup -->
+    <section class="hero">
+        <div class="container grid-2">
+            <!-- Left side: text content -->
+            <div class="hero-content">
+                <h1>大学生活の予定管理 
+                <br>を、<br>
+                もっとシンプルに。</h1>
+                <p>Campus Planner は、授業・課題・バイト・サークル......ばらばらな予定をひとつの画面で管理できる、大学生活専用のスケジュールアプリです。</p>
+                <a href="#contact" class="btn btn-primary">無料で試してみる</a>
+            </div>
+
+            <!-- Right side: phone mockup with schedule preview -->
+            <div class="phone-mockup">
+                <div class="phone-screen">
+                    <div class="phone-header">
+                        <svg class="header-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        今日の予定
+                    </div>
+                    
+                    <!-- Schedule item: class -->
+                    <div class="schedule-item clock">
+                        <div class="schedule-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-title">経済学の講義</div>
+                            <div class="schedule-time">9:00 - 10:30</div>
+                        </div>
+                    </div>
+
+                    <!-- Schedule item: deadline -->
+                    <div class="schedule-item check">
+                        <div class="schedule-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5">
+                              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                 <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                              </svg>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-title">レポート提出</div>
+                            <div class="schedule-time">17:00 締切</div>
+                        </div>
+                    </div>
+
+                    <!-- Schedule item: club activity -->
+                    <div class="schedule-item event">
+                        <div class="schedule-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                        </div>
+                        <div class="schedule-content">
+                            <div class="schedule-title">サークル活動</div>
+                            <div class="schedule-time">18:00 - 20:00</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem section - showing user pain points -->
+    <section class="problems">
+        <div class="container">
+            <h2 class="section-title">大学生活、こんな悩みはありませんか？</h2>
+            <div class="problems-list">
+                <div class="problem-card">
+                    <span class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="13"></line>
+                            <circle cx="12" cy="16" r="0.5" fill="currentColor"></circle>
+                        </svg>
+                    </span>
+                    <span>授業・課題の締め切りをつい忘れてしまう</span>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="13"></line>
+                            <circle cx="12" cy="16" r="0.5" fill="currentColor"></circle>
+                        </svg>
+                    </span>
+                    <span>サークルとバイトの予定がかぶってしまう</span>
+                </div>
+                <div class="problem-card">
+                    <span class="problem-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="13"></line>
+                            <circle cx="12" cy="16" r="0.5" fill="currentColor"></circle>
+                        </svg>
+                    </span>
+                    <span>グループ課題の進捗が把握しづらい</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features section - showing app benefits -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Campus Planner の3つの特徴</h2>
+            
+            <!-- Three feature cards in a row -->
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                    </div>
+                    <h3>時間割と課題をまとめて管理</h3>
+                    <p>時間割と課題の締め切りをひとつの画面に表示。</p>
+                </div>
+                <div class="card">
+                    <div class="icon green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="13.5" cy="6.5" r=".5"></circle>
+                            <circle cx="17.5" cy="10.5" r=".5"></circle>
+                            <circle cx="8.5" cy="7.5" r=".5"></circle>
+                            <circle cx="6.5" cy="12.5" r=".5"></circle>
+                            <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>バイト・サークルも一括スケジュール</h3>
+                    <p>学業とプライベートの予定を色分けして見やすく。</p>
+                </div>
+                <div class="card">
+                    <div class="icon orange">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>グループ共有で抜け漏れ防止</h3>
+                    <p>グループ課題のタスクを共有し、進捗を確認。</p>
+                </div>
+            </div>
+
+            <!-- How to start section -->
+            <h2 class="section-title mt-80">3ステップでかんたんスタート</h2>
+            <div class="steps">
+                <!-- Step 1 -->
+                <div class="step">
+                    <div class="step-num">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="10" cy="7" r="4"></circle>
+                            <line x1="20" y1="8" x2="20" y2="14"></line>
+                            <line x1="23" y1="11" x2="17" y2="11"></line>
+                        </svg>
+                        <span class="step-number">1</span>
+                    </div>
+                    <h3>アカウント登録</h3>
+                    <p>メールアドレスだけでOK</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step">
+                    <div class="step-num">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                        <span class="step-number">2</span>
+                    </div>
+                    <h3>時間割・課題・予定を登録</h3>
+                    <p>簡単な入力で予定を追加</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step">
+                    <div class="step-num">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                        <span class="step-number">3</span>
+                    </div>
+                    <h3>スマホでもPCでも確認</h3>
+                    <p>いつでもどこでもアクセス</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing section - subscription plans -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 class="section-title">シンプルな料金プラン</h2>
+            
+            <!-- Comparison table -->
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>プラン</th>
+                        <th>月額料金</th>
+                        <th>登録できる予定数</th>
+                        <th>共有できる人数</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>FREE</strong></td>
+                        <td>¥0</td>
+                        <td>予定100件まで</td>
+                        <td>共有なし</td>
+                    </tr>
+                    <tr>
+                        <td><strong>STUDENT</strong></td>
+                        <td>¥300</td>
+                        <td>無制限</td>
+                        <td>共有3人まで</td>
+                    </tr>
+                    <tr>
+                        <td><strong>TEAM</strong></td>
+                        <td>¥800</td>
+                        <td>無制限</td>
+                        <td>共有10人まで</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Pricing cards for visual appeal -->
+            <div class="grid-3 mt-50">
+                <!-- Free plan -->
+                <div class="card pricing-card">
+                    <h3>FREE</h3>
+                    <div class="price">¥0</div>
+                    <ul>
+                        <li>• 予定100件まで</li>
+                        <li>• 共有なし</li>
+                    </ul>
+                </div>
+                
+                <!-- Student plan - most popular -->
+                <div class="card pricing-card featured">
+                    <div class="badge">人気</div>
+                    <h3>STUDENT</h3>
+                    <div class="price">¥300</div>
+                    <ul>
+                        <li>• 無制限</li>
+                        <li>• 共有3人まで</li>
+                    </ul>
+                </div>
+                
+                <!-- Team plan -->
+                <div class="card pricing-card">
+                    <h3>TEAM</h3>
+                    <div class="price">¥800</div>
+                    <ul>
+                        <li>• 無制限</li>
+                        <li>• 共有10人まで</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ section - frequently asked questions -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">よくあるご質問</h2>
+            <div class="faq-list">
+                <!-- Question 1 -->
+                <details class="faq-item">
+                    <summary class="faq-q">
+                        <span>Q. 本当に無料で使えますか？</span>
+                        <span class="arrow">∨</span>
+                    </summary>
+                </details>
+                
+                <!-- Question 2 -->
+                <details class="faq-item">
+                    <summary class="faq-q">
+                        <span>Q. スマホだけでも使えますか？</span>
+                        <span class="arrow">∨</span>
+                    </summary>
+                    
+                </details>
+                
+                <!-- Question 3 -->
+                <details class="faq-item">
+                    <summary class="faq-q">
+                        <span>Q. 大学のメールアドレスがなくても登録できますか？</span>
+                        <span class="arrow">∨</span>
+                    </summary>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact form section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">お問い合わせ</h2>
+            <p class="text-center">ご質問やご要望がございましたら、お気軽にお問い合わせください。</p>
+            
+            <form class="contact-form" action="mailto:support@campusplanner.example.com" method="get" enctype="text/plain">
+                <!-- Inquiry type dropdown -->
+                <div class="form-group">
+                    <label for="inquiry-type">お問い合わせ種類</label>
+                    <select id="inquiry-type" name="subject">
+                        <option>不具合</option>
+                    </select>
+                </div>
+                
+                <!-- Email input -->
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <div class="input-with-icon">
+                        <input type="email" id="email" name="from" placeholder="example@university.ac.jp" required>
+                        <div class="input-icon">
+                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                <rect x="2" y="2" width="20" height="20" rx="4" fill="#E85C5C"/>
+                                <circle cx="8" cy="12" r="1.5" fill="white"/>
+                                <circle cx="12" cy="12" r="1.5" fill="white"/>
+                                <circle cx="16" cy="12" r="1.5" fill="white"/>
+                                <rect x="19" y="9" width="1.5" height="6" rx="0.75" fill="white"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Message textarea -->
+                <div class="form-group">
+                    <label for="message">お問い合わせ内容</label>
+                    <textarea id="message" name="body" placeholder="お問い合わせ内容をご記入ください" required></textarea>
+                </div>
+                
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-full">
+                    <svg class="send-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                    送信する
+                </button>
+                <p class="form-note">※このフォームはデモです。実際の送信は行われません。</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer with copyright info -->
+    <footer>
+        <p>© 2025 Campus Planner</p>
+        <p>このページは大学の授業問題として作成されたデモサイトです。</p>
+    </footer>
+</body>
+</html>
